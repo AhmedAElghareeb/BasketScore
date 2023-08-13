@@ -1,5 +1,5 @@
-![home](https://github.com/AhmedAElghareeb/PointsCounter/assets/112869283/ae68006a-f58b-423c-bee3-5f40cc3f131a)
-![1](https://github.com/AhmedAElghareeb/PointsCounter/assets/112869283/800f6a3b-14c8-4892-8c44-f4cff1b2d485)
+![2](https://github.com/AhmedAElghareeb/PointsCounter-master/assets/112869283/a09be301-8cf1-4f87-a1eb-656625ba23f1)
+![1](https://github.com/AhmedAElghareeb/PointsCounter-master/assets/112869283/754f5f58-1675-4e35-867a-43e010be78d2)
 # basketball_game_counter
 
 A new Flutter project.
