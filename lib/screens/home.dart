@@ -7,11 +7,12 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return BlocConsumer<CounterCubit, CounterState>(
+    return BlocBuilder<CounterCubit, CounterState>(
       builder: (context, state) => Scaffold(
         appBar: AppBar(
+          elevation: 0.0,
           backgroundColor: Colors.green,
-          title: Text(
+          title: const Text(
             "Basket Counter",
           ),
         ),
@@ -26,14 +27,14 @@ class Home extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text("Team A", style: TextStyle(
+                      const Text("Team A", style: TextStyle(
                         fontSize: 35,
                       ),),
-                      Text("${BlocProvider.of<CounterCubit>(context).teamAPoints}", style: TextStyle(
+                      Text("${BlocProvider.of<CounterCubit>(context).teamAPoints}", style: const TextStyle(
                         fontSize: 100,
                       ),),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: Size(150, 50)),
+                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: const Size(150, 50)),
                         onPressed: ()
                         {
                           BlocProvider.of<CounterCubit>(
@@ -42,7 +43,7 @@ class Home extends StatelessWidget {
                             buttonNumber: 1,
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           "Add 1 Point",
                           style: TextStyle(
                             fontSize: 20,
@@ -51,7 +52,7 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: Size(150, 50)),
+                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: const Size(150, 50)),
                         onPressed: ()
                         {
                           BlocProvider.of<CounterCubit>(
@@ -60,7 +61,7 @@ class Home extends StatelessWidget {
                             buttonNumber: 2,
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           "Add 2 Point",
                           style: TextStyle(
                             fontSize: 20,
@@ -69,7 +70,7 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: Size(150, 50)),
+                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: const Size(150, 50)),
                         onPressed: ()
                         {
                           BlocProvider.of<CounterCubit>(
@@ -78,7 +79,7 @@ class Home extends StatelessWidget {
                             buttonNumber: 3,
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           "Add 3 Point",
                           style: TextStyle(
                             fontSize: 20,
@@ -91,7 +92,7 @@ class Home extends StatelessWidget {
                 ),
                 Container(
                   height: 500,
-                  child: VerticalDivider(
+                  child: const VerticalDivider(
                     color: Colors.black,
                     thickness: 1,
                     indent: 50,
@@ -103,14 +104,14 @@ class Home extends StatelessWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Text("Team B", style: TextStyle(
+                      const Text("Team B", style: TextStyle(
                         fontSize: 35,
                       ),),
-                      Text("${BlocProvider.of<CounterCubit>(context).teamBPoints}", style: TextStyle(
+                      Text("${BlocProvider.of<CounterCubit>(context).teamBPoints}", style: const TextStyle(
                         fontSize: 100,
                       ),),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: Size(150, 50)),
+                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: const Size(150, 50)),
                         onPressed: ()
                         {
                           BlocProvider.of<CounterCubit>(
@@ -119,7 +120,7 @@ class Home extends StatelessWidget {
                             buttonNumber: 1,
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           "Add 1 Point",
                           style: TextStyle(
                             fontSize: 20,
@@ -128,7 +129,7 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: Size(150, 50)),
+                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: const Size(150, 50)),
                         onPressed: ()
                         {
                           BlocProvider.of<CounterCubit>(
@@ -137,7 +138,7 @@ class Home extends StatelessWidget {
                             buttonNumber: 2,
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           "Add 2 Point",
                           style: TextStyle(
                             fontSize: 20,
@@ -146,7 +147,7 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: Size(150, 50)),
+                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: const Size(150, 50)),
                         onPressed: ()
                         {
                           BlocProvider.of<CounterCubit>(
@@ -155,7 +156,7 @@ class Home extends StatelessWidget {
                             buttonNumber: 3,
                           );
                         },
-                        child: Text(
+                        child: const Text(
                           "Add 3 Point",
                           style: TextStyle(
                             fontSize: 20,
@@ -169,14 +170,14 @@ class Home extends StatelessWidget {
               ],
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.red, minimumSize: Size(150, 50)),
+              style: ElevatedButton.styleFrom(primary: Colors.red, minimumSize: const Size(150, 50)),
               onPressed: ()
               {
                 BlocProvider.of<CounterCubit>(context).ResetTeamAButton();
 
                 BlocProvider.of<CounterCubit>(context).ResetTeamBButton();
               },
-              child: Text(
+              child: const Text(
                 "RESET",
                 style: TextStyle(
                   fontSize: 20,
@@ -187,7 +188,6 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
-      listener: (context, state) {},
     );
   }
 }
