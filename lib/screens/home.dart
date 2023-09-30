@@ -1,13 +1,16 @@
-import 'package:basketball_game_counter/cubit/counter_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../cubit/cubit.dart';
+
 class Home extends StatelessWidget {
+  const Home({super.key});
+
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return BlocBuilder<CounterCubit, CounterState>(
+    return BlocBuilder<CounterCubit, CounterStates>(
       builder: (context, state) => Scaffold(
         appBar: AppBar(
           elevation: 0.0,
@@ -22,7 +25,7 @@ class Home extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Container(
+                SizedBox(
                   height: 500,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -34,7 +37,7 @@ class Home extends StatelessWidget {
                         fontSize: 100,
                       ),),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: const Size(150, 50)),
+                        style: ElevatedButton.styleFrom(backgroundColor: Colors.green, minimumSize: const Size(150, 50)),
                         onPressed: ()
                         {
                           BlocProvider.of<CounterCubit>(
@@ -52,7 +55,7 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: const Size(150, 50)),
+                        style: ElevatedButton.styleFrom(backgroundColor: Colors.green, minimumSize: const Size(150, 50)),
                         onPressed: ()
                         {
                           BlocProvider.of<CounterCubit>(
@@ -70,7 +73,7 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: const Size(150, 50)),
+                        style: ElevatedButton.styleFrom(backgroundColor: Colors.green, minimumSize: const Size(150, 50)),
                         onPressed: ()
                         {
                           BlocProvider.of<CounterCubit>(
@@ -90,16 +93,16 @@ class Home extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
+                const SizedBox(
                   height: 500,
-                  child: const VerticalDivider(
+                  child: VerticalDivider(
                     color: Colors.black,
                     thickness: 1,
                     indent: 50,
                     endIndent: 50,
                   ),
                 ),
-                Container(
+                SizedBox(
                   height: 500,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -111,7 +114,7 @@ class Home extends StatelessWidget {
                         fontSize: 100,
                       ),),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: const Size(150, 50)),
+                        style: ElevatedButton.styleFrom(backgroundColor: Colors.green, minimumSize: const Size(150, 50)),
                         onPressed: ()
                         {
                           BlocProvider.of<CounterCubit>(
@@ -129,7 +132,7 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: const Size(150, 50)),
+                        style: ElevatedButton.styleFrom(backgroundColor: Colors.green, minimumSize: const Size(150, 50)),
                         onPressed: ()
                         {
                           BlocProvider.of<CounterCubit>(
@@ -147,7 +150,7 @@ class Home extends StatelessWidget {
                         ),
                       ),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(primary: Colors.green, minimumSize: const Size(150, 50)),
+                        style: ElevatedButton.styleFrom(backgroundColor: Colors.green, minimumSize: const Size(150, 50)),
                         onPressed: ()
                         {
                           BlocProvider.of<CounterCubit>(
@@ -170,7 +173,7 @@ class Home extends StatelessWidget {
               ],
             ),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(primary: Colors.red, minimumSize: const Size(150, 50)),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.red, minimumSize: const Size(150, 50)),
               onPressed: ()
               {
                 BlocProvider.of<CounterCubit>(context).ResetTeamAButton();

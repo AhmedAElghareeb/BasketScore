@@ -1,9 +1,9 @@
 import 'package:bloc/bloc.dart';
 
-part 'counter_state.dart';
+part 'states.dart';
 
-class CounterCubit extends Cubit<CounterState> {
-  CounterCubit() : super(CounterAIncrementState());
+class CounterCubit extends Cubit<CounterStates> {
+  CounterCubit() : super(CounterStates());
 
   int teamAPoints = 0;
 
